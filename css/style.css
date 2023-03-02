@@ -8,6 +8,10 @@ body {
   overflow-x: hidden;
 }
 
+.iOS_body {
+  overflow-w: hidden;
+}
+
 .inner {
   max-width: 1366px;
   margin: 0 auto;
@@ -1244,6 +1248,11 @@ footer .copy p small {
   bottom: 50px;
   left: 50%;
   transform: translate(-50%);
+}
+@media screen and (min-width:768px) {
+  .ball_link {
+    display: none;
+  }
 }
 .ball_link ul {
   display: flex;

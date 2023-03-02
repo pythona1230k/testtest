@@ -33,6 +33,10 @@ body {
   overflow-x: hidden;
 }
 
+.iOS_body {
+  overflow-w: hidden;
+}
+
 .inner {
   max-width: 1366px;
   margin: 0 auto;
@@ -1374,6 +1378,9 @@ footer {
 
 // ball_link
 .ball_link {
+  @include mq(pc) {
+    display: none;
+  }
   position: fixed;
   bottom: 50px;
   left: 50%;
