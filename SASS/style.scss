@@ -1395,9 +1395,11 @@ footer {
         border-radius: 50%;
         padding: 20px 0;
         outline: 3px solid #9e95c7;
+        position: relative;
+        z-index: 1;
 
-        &:hover{
-          opacity: .85;
+        &:hover {
+          opacity: 0.85;
         }
 
         &.ball_link_first {

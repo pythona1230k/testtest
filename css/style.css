@@ -1264,6 +1264,8 @@ footer .copy p small {
   border-radius: 50%;
   padding: 20px 0;
   outline: 3px solid #9e95c7;
+  position: relative;
+  z-index: 1;
 }
 .ball_link ul li a:hover {
   opacity: 0.85;
