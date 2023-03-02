@@ -31,10 +31,12 @@ body {
   font-weight: 300;
   color: $banner_color;
   overflow-x: hidden;
+  box-sizing : border-box;
+  max-width: 100%;
 }
 
 .iOS_body {
-  overflow-w: hidden;
+  overflow-x: hidden;
 }
 
 .inner {
@@ -1401,9 +1403,7 @@ footer {
         display: inline-block;
         border-radius: 50%;
         padding: 20px 0;
-        outline: 3px solid #9e95c7;
-        position: relative;
-        z-index: 1;
+        border: 3px solid #9e95c7;
 
         &:hover {
           opacity: 0.85;

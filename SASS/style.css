@@ -6,10 +6,12 @@ body {
   font-weight: 300;
   color: #707070;
   overflow-x: hidden;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .iOS_body {
-  overflow-w: hidden;
+  overflow-x: hidden;
 }
 
 .inner {
@@ -1272,9 +1274,7 @@ footer .copy p small {
   display: inline-block;
   border-radius: 50%;
   padding: 20px 0;
-  outline: 3px solid #9e95c7;
-  position: relative;
-  z-index: 1;
+  border: 3px solid #9e95c7;
 }
 .ball_link ul li a:hover {
   opacity: 0.85;
