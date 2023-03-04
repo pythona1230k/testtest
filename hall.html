@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>有限会社雅 雅ホール</title>
+  <link rel="stylesheet" href="./SASS/reset.css">
+  <link rel="stylesheet" href="./SASS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="iOS_body">
+    <!-- header -->
+    <header>
+      <div class="item_box inner">
+        <h1>
+          <a href="index.html">
+            <img src="./img/logo.png" alt="ロゴ">
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="#access">ホールのご案内</a></li>
+            <li><a id="plan_list" href="#plan">プランのご案内</a></li>
+            <li><a href="">贈り物</a></li>
+            <li><a href="">雅の会</a></li>
+            <li><a href="">よくある質問</a></li>
+          </ul>
+        </nav>
+        <a href="" class="header_contact">
+          <p>
+            <i class="fa-solid fa-phone-volume"></i>
+            お問い合わせ
+          </p>
+        </a>
+      </div>
+      <!-- hover plan_list -->
+      <div class="plan_list_item">
+        <ul>
+          <li>
+            <a href="" class="plan_first">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">小規模プラン</h3>
+                <p class="plan_list_text">44万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="plan_second">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">中規模プラン</h3>
+                <p class="plan_list_text">88万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="plan_third">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">大規模プラン</h3>
+                <p class="plan_list_text">110万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- hamburger -->
+    <div id="nav_area">
+      <!-- menu -->
+      <div class="sp_nav">
+        <h1 class="nav_area_logo">
+          <a href="index.html">
+            <img src="./img/logo.png" alt="ロゴ">
+          </a>
+        </h1>
+        <div class="tell_box">
+          <p>24時間365日受付</p>
+          <div class="tell_item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <a href="tel:0120-10-8741">0120-10-8741</a>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#access">ホールのご案内</a></li>
+            <li><a href="#plan" id="plan_list_target">プランのご案内</a></li>
+            <ul id="plan_list_drop">
+              <li><a href="">小規模プラン</a></li>
+              <li><a href="">中規模プラン</a></li>
+              <li><a href="">大規模プラン</a></li>
+            </ul>
+            <li><a href="">贈り物</a></li>
+            <li><a href="">雅の会</a></li>
+            <li><a href="">よくある質問</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- btn -->
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- mask -->
+      <div id="mask"></div>
+    </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- hall_main -->
+    <section class="hall_main">
+      <h2>ホールのご案内</h2>
+    </section>
+
+    <!-- hall_access -->
+    <section id="hall_access" class="hall_access inner">
+      <!-- util_title -->
+      <h2 class="util_title_another">アクセス</h2>
+      <!-- access_item_box -->
+      <div class="access_item_box">
+        <ul>
+          <li>
+            <img src="./img/title-pc/hole_first_pc.png" alt="かたやまホール">
+            <div class="access_item_text">
+              <h3 class="access_item_title">雅ホール</h3>
+              <p>
+                〒582-0020　柏原市片山町3-2<br>
+                TEL：072-977-8741　FAX：072-977-3800<br>
+                【駐車場】6台(近隣にコインP有)
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d821.3459030349073!2d135.63315869761124!3d34.56915880093146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600127d68f705e27%3A0x60813dcf72dafe4!2z6ZuF44Ob44O844OrIOeJh-WxsQ!5e0!3m2!1sja!2sjp!4v1677926342189!5m2!1sja!2sjp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </li>
+          <li>
+            <img src="./img/title-pc/hole_second_pc.png" alt="かたやまホール">
+            <div class="access_item_text">
+              <h3 class="access_item_title">雅ホール　柏原</h3>
+              <p>
+                〒582-0009　柏原市大正3-1-37<br>
+                TEL：072-971-8701　FAX：072-971-8702<br>
+                【駐車場】35台
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d588.0840616844978!2d135.6182146150986!3d34.586494821091684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012797fa1fd4ad%3A0x4f3d5fa070dd4a2b!2z6ZuF44Ob44O844Or5p-P5Y6f!5e0!3m2!1sja!2sjp!4v1677926527995!5m2!1sja!2sjp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </li>
+          <li>
+            <img src="./img/title-pc/hole_third_pc.png" alt="かたやまホール">
+            <div class="access_item_text">
+              <h3 class="access_item_title">雅ホール　やわらぎ</h3>
+              <p>
+                〒582-0022　柏原市国分市場2-11-29<br>
+                TEL：072-977-8701　FAX：072-978-6660<br>
+                【駐車場】50台
+              </p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d315.58487512080524!2d135.6466022605627!3d34.56696278945134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60012884eb5a4259%3A0x10601b36f81cf089!2z6ZuF44Ob44O844Or44KE44KP44KJ44GO!5e0!3m2!1sja!2sjp!4v1677926425612!5m2!1sja!2sjp"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- access_area -->
+      <div class="access_area">
+        <h3 class="access_area_title">対応エリア</h3>
+        <div class="access_area_text">
+          <dl>
+            <dt>大阪</dt>
+            <dd class="access_area_text_first">柏原、藤井寺、八尾、東大阪、大阪市内、羽曳野</dd>
+            <dt>奈良</dt>
+            <dd>香芝、王寺、上牧、三郷</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- 室内紹介 -->
+    <section class="indoor_introduction">
+      <h2 class="util_title_another">施設のご案内</h2>
+
+      <div class="hall_list">
+        <ul>
+          <li>
+            <h3>1階 最大ホール（100席）</h3>
+            <img src="./img/daihole.jpg" alt="大ホール">
+            <p>家族葬から一般まで、お客様のさまざまなご要望にお応えする空間を演出します。</p>
+          </li>
+          <li>
+            <h3>2階 小ホール（30席）</h3>
+            <img src="./img/syohole.jpg" alt="小ホール">
+            <p>
+              落ち着いた和の葬送と告別式の儀式にこだわりたい。そんな方にもご納得いただける、お見送りのための空間です。1階同様、空調設備も完備し季節を問わず参会者の皆様にも快適にお過ごしいただけます。祭壇の形式、設定のご要望にも応じております。
+            </p>
+          </li>
+          <li>
+            <h3>親族控室(20畳)/会食室/安置室</h3>
+            <img src="./img/20zyo.jpg" alt="20城部屋">
+            <p>葬儀の打ち合わせや、会食室として使用します。お茶、コーヒー等無料のサービスドリンクをご準備しております。 また、病院、施設等から直接ホールへ故人様をご安置させていただく場合に安置室としても使用します。</p>
+          </li>
+          <li>
+            <h3>親族控室(１0畳)/(８畳)</h3>
+            <img src="./img/10zyo.jpg" alt="10城部屋">
+            <p>
+              テレビ、冷蔵庫、DVDプレーヤー、お子様用のおもちゃもございます。 貸布団もありますので宿泊もしていただけます。<br>
+            </p>
+            <p class="text">
+              ※宗教者様の控室として使用する場合がございます。
+            </p>
+          </li>
+          <li>
+            <h3>浴室</h3>
+            <img src="./img/yokushitu.jpg" alt="浴室">
+            <p>シャンプー・コンディショナー、ボディーソープはじめ、突然のご宿泊にも安心して過ごしていただけるように各種アメニティーをご準備しております。</p>
+          </li>
+        </ul>
+        <div class="caution">
+          ※各ホールによって写真と異なる場合がございます。
+        </div>
+      </div>
+    </section>
+
+    <!-- plan -->
+    <section id="plan" class="hall_plan">
+      <!-- util_title -->
+      <h2 class="util_title_another">プランのご案内</h2>
+      <!-- plan_list -->
+      <div class="plan_list">
+        <ul>
+          <li>
+            <a href="" class="plan_first">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">小規模プラン</h3>
+                <p class="plan_list_text">44万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="plan_second">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">中規模プラン</h3>
+                <p class="plan_list_text">88万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="plan_third">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">大規模プラン</h3>
+                <p class="plan_list_text">110万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- footer -->
+    <footer>
+      <h1>
+        <a href="index.html">
+          <img src="./img/logo.png" alt="ロゴ">
+        </a>
+        <!-- top scroll -->
+        <div class="top_scroll">
+          TOPへ戻る
+        </div>
+      </h1>
+      <!-- tell_box -->
+      <div class="question_contact_item">
+        <p class="about_contact_item_text">
+          フリーダイアル
+        </p>
+        <div class="about_contact_item_tell">
+          <i class="fa-solid fa-phone-volume"></i>
+          <a href="tel:0120-10-8741">0120-10-8741</a>
+        </div>
+        <p>
+          24時間365日受付
+        </p>
+        <p class="tell_anytime">
+          いつでもご相談ください。
+        </p>
+      </div>
+      <!-- information -->
+      <div class="footer_information">
+        <div class="footer_left">
+          <dl>
+            <dt>会社名</dt>
+            <dd>有限会社　雅</dd>
+            <dt>本社所在地</dt>
+            <dd>〒582-0020　大阪府柏原市片山町3-2</dd>
+            <dt>代表者</dt>
+            <dd>明石 雅史</dd>
+            <dt>設立</dt>
+            <dd>平成15年4月</dd>
+            <dt>事業内容</dt>
+            <dd>多目的ホール運営</dd>
+          </dl>
+        </div>
+        <div class="footer_right">
+          <dl>
+            <dt>雅ホール</dt>
+            <dd>〒582-0020　 柏原市片山町3-2</dd>
+            <dd>TEL：072-977-8741　FAX：072-977-3800</dd>
+          </dl>
+          <dl>
+            <dt>雅ホール　柏原</dt>
+            <dd>〒582-0022　 柏原市大正3-1-37</dd>
+            <dd>TEL：072-971-8701　FAX：072-971-8702</dd>
+          </dl>
+          <dl>
+            <dt>雅ホール　やわらぎ</dt>
+            <dd>〒582-0022　 柏原市国分市場2-11-29</dd>
+            <dd>TEL：072-977-8701　FAX：072-978-6660</dd>
+          </dl>
+        </div>
+      </div>
+      <!-- copy -->
+      <div class="copy">
+        <p>
+          <small>
+            Copyright © 2023 葬儀・家族葬の雅ホール All Rights Reserved.
+          </small>
+        </p>
+      </div>
+    </footer>
+    <!-- ball_link -->
+    <div class="ball_link">
+      <ul>
+        <li>
+          <a href="" class="ball_link_first">
+            <img src="./img/tell_icon.png" alt="電話アイコン">
+            <p>お問い合わせ</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img/map_icon.png" alt="マップアイコン">
+            <p>アクセス</p>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <img src="./img/status_icon.png" alt="雅の会アイコン">
+            <p>雅の会</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

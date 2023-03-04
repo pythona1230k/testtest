@@ -7,10 +7,16 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   max-width: 100%;
-  font-weight: 400;
+  font-weight: 300;
 }
 body.active {
   overflow: hidden;
+}
+
+img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .iOS_body {
@@ -85,6 +91,11 @@ header {
   padding: 19px 58px;
   position: relative;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header {
+    padding: 19px 5%;
+  }
+}
 @media screen and (max-width:767px) {
   header {
     position: absolute;
@@ -107,6 +118,11 @@ header .item_box h1 a {
   height: 100%;
   display: block;
   width: 167px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .item_box h1 a {
+    width: 120px;
+  }
 }
 header .item_box h1 a img {
   width: 100%;
@@ -131,13 +147,28 @@ header .item_box nav ul li:not(:last-child)::after {
   top: 0;
   right: -12px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .item_box nav ul li:not(:last-child)::after {
+    right: -6px;
+  }
+}
 header .item_box nav ul li:not(:last-child) {
   margin-right: 24px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .item_box nav ul li:not(:last-child) {
+    margin-right: 12px;
+  }
 }
 header .item_box nav ul li a {
   color: #c9a9cc;
   height: 86px;
   position: relative;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .item_box nav ul li a {
+    font-size: 14px;
+  }
 }
 header .item_box nav ul li a:hover::before {
   content: "";
@@ -158,6 +189,12 @@ header .header_contact {
   padding: 12px 0;
   color: #fff;
   transition: all 0.3s, outline 0.1s;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .header_contact {
+    width: 100px;
+    font-size: 12px;
+  }
 }
 @media screen and (max-width:767px) {
   header .header_contact {
@@ -231,14 +268,14 @@ header .plan_list_item ul li a .plan_text_box {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-38%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 3;
 }
-header .plan_list_item ul li a .plan_text_box h3 {
-  font-size: 24px;
+header .plan_list_item ul li a .plan_text_box .plan_list_title {
   font-family: "Shippori Mincho", serif;
   letter-spacing: 2.4px;
   line-height: 1.4583333333;
+  font-size: 24px;
 }
 header .plan_list_item ul li a .plan_text_box p {
   font-size: 16px;
@@ -749,6 +786,11 @@ header .plan_list_item ul li .plan_third .plan_bg {
   background-color: #f8f7fc;
   padding-bottom: 136px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .flow {
+    padding: 0 3% 136px;
+  }
+}
 @media screen and (max-width:767px) {
   .flow {
     padding: 0 11px 112px;
@@ -809,6 +851,12 @@ header .plan_list_item ul li .plan_third .plan_bg {
   display: flex;
   justify-content: center;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .flow .funeral_box {
+    display: block;
+    display: grid;
+  }
+}
 @media screen and (max-width:767px) {
   .flow .funeral_box {
     display: block;
@@ -817,6 +865,11 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 .flow .funeral_box .one_day_funeral {
   margin-right: 78px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .flow .funeral_box .one_day_funeral {
+    margin-bottom: 48px;
+  }
 }
 @media screen and (max-width:767px) {
   .flow .funeral_box .one_day_funeral {
@@ -941,6 +994,12 @@ header .plan_list_item ul li .plan_third .plan_bg {
 
 .access {
   margin-bottom: 136px;
+  padding: 0 19.4%;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .access {
+    padding: 0 5%;
+  }
 }
 @media screen and (max-width:767px) {
   .access {
@@ -955,7 +1014,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 .access .access_item_box ul {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 1.8%;
 }
 @media screen and (max-width:767px) {
   .access .access_item_box ul {
@@ -964,11 +1023,17 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 .access .access_item_box ul li .access_item_title {
   font-size: 24px;
+  font-weight: 500;
   font-family: "Shippori Mincho", serif;
   letter-spacing: 2.4px;
   padding-left: 13px;
   margin-bottom: 12px;
   position: relative;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .access .access_item_box ul li .access_item_title {
+    font-size: 20px;
+  }
 }
 .access .access_item_box ul li .access_item_title::before {
   content: "";
@@ -980,8 +1045,8 @@ header .plan_list_item ul li .plan_third .plan_bg {
   top: 0;
 }
 .access .access_item_box ul li img {
-  width: 350px;
-  height: 263px;
+  width: 100%;
+  height: auto;
   margin-bottom: 19px;
 }
 @media screen and (max-width:767px) {
@@ -992,16 +1057,20 @@ header .plan_list_item ul li .plan_third .plan_bg {
        object-fit: cover;
   }
 }
-.access .access_item_box ul li .access_item_text {
+.access .access_item_box ul li p {
   margin-bottom: 58px;
+  letter-spacing: 1.4px;
+  line-height: 1.6;
 }
-@media screen and (max-width:767px) {
-  .access .access_item_box ul li .access_item_text {
-    margin-bottom: 48px;
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .access .access_item_box ul li p {
+    font-size: 14px;
   }
 }
-.access .access_item_box ul li .access_item_text p {
-  line-height: 1.6;
+@media screen and (max-width:767px) {
+  .access .access_item_box ul li p {
+    margin-bottom: 48px;
+  }
 }
 .access .access_area {
   max-width: 701px;
@@ -1268,7 +1337,12 @@ footer .copy p small {
   left: 50%;
   transform: translate(-50%);
 }
-@media screen and (min-width:768px) {
+@media screen and (min-width:1280px) {
+  .ball_link {
+    display: none;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .ball_link {
     display: none;
   }
@@ -1311,4 +1385,290 @@ footer .copy p small {
 }
 .ball_link ul li a p {
   font-size: 12px;
+}
+
+.hall_main {
+  height: 144px;
+  background: url(../img/title-pc/hole_second_pc.png) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hall_main::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.hall_main h2 {
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 3.2px;
+  font-family: "Shippori Mincho", serif;
+  z-index: 2;
+}
+
+.hall_access {
+  padding: 0 134px;
+}
+.hall_access h2 {
+  margin-bottom: 51px;
+}
+.hall_access .access_item_box ul li {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 96px;
+}
+.hall_access .access_item_box ul li:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+.hall_access .access_item_box ul li img {
+  width: 535px;
+}
+.hall_access .access_item_box ul li .access_item_text {
+  width: 535px;
+}
+.hall_access .access_item_box ul li .access_item_text .access_item_title {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2.4px;
+  padding-left: 13px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.hall_access .access_item_box ul li .access_item_text .access_item_title::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #e8c3eb;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.hall_access .access_item_box ul li .access_item_text p {
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+  margin-bottom: 19px;
+}
+.hall_access .access_item_box ul li .access_item_text iframe {
+  display: block;
+  width: 100%;
+  height: 261px;
+}
+.hall_access .access_area {
+  max-width: 701px;
+  margin: 0 auto;
+  text-align: center;
+  outline: 1px solid #c89bd3;
+}
+.hall_access .access_area .access_area_title {
+  line-height: 45px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  background-color: #c89bd3;
+}
+.hall_access .access_area .access_area_text {
+  padding: 24px 0;
+  max-width: 445px;
+  margin: 0 auto 57px;
+  text-align: left;
+}
+@media screen and (max-width:767px) {
+  .hall_access .access_area .access_area_text {
+    padding: 18px 54px;
+  }
+}
+.hall_access .access_area .access_area_text dl dt {
+  font-size: 18px;
+  color: #cf94d6;
+  letter-spacing: 1.8px;
+  font-weight: 600;
+  line-height: 1.4222222222;
+}
+.hall_access .access_area .access_area_text dl dd {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+.hall_access .access_area .access_area_text dl .access_area_text_first {
+  margin-bottom: 14px;
+}
+
+.indoor_introduction {
+  background-color: #f8f7fc;
+}
+.indoor_introduction h2 {
+  margin-bottom: 51px;
+}
+.indoor_introduction .hall_list {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 134px 200px;
+  position: relative;
+}
+.indoor_introduction .hall_list ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 24px;
+}
+.indoor_introduction .hall_list ul li {
+  width: calc((100% - 48px) / 3);
+  height: 486px;
+}
+.indoor_introduction .hall_list ul li:first-child {
+  margin-bottom: 65px;
+}
+.indoor_introduction .hall_list ul li h3 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2.4px;
+  padding-left: 13px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.indoor_introduction .hall_list ul li h3::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #e8c3eb;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.indoor_introduction .hall_list ul li img {
+  width: 100%;
+  height: 232px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 18px;
+}
+.indoor_introduction .hall_list ul li p {
+  letter-spacing: 1.6px;
+  line-height: 1.8;
+}
+.indoor_introduction .hall_list ul li .text {
+  margin-top: 17px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  line-height: 1.2;
+}
+.indoor_introduction .hall_list .caution {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  position: absolute;
+  bottom: 133px;
+  right: 133px;
+}
+
+.hall_plan {
+  padding: 0 9.7% 136px 9.7%;
+}
+@media screen and (max-width:767px) {
+  .hall_plan {
+    padding: 0 11px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.hall_plan .util_title_another {
+  margin-bottom: 44px;
+}
+@media screen and (max-width:767px) {
+  .hall_plan .util_title_another {
+    margin-bottom: 32px;
+  }
+}
+.hall_plan .plan_list {
+  padding-bottom: 40px;
+}
+.hall_plan .plan_list ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+@media screen and (max-width:767px) {
+  .hall_plan .plan_list ul {
+    display: block;
+    width: 100%;
+  }
+}
+.hall_plan .plan_list ul li {
+  width: 356px;
+  height: 128px;
+}
+@media screen and (max-width:767px) {
+  .hall_plan .plan_list ul li {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+.hall_plan .plan_list ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.hall_plan .plan_list ul li a:hover .plan_bg {
+  transform: scale(1.2);
+}
+.hall_plan .plan_list ul li a .plan_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transition: transform 0.7s;
+}
+.hall_plan .plan_list ul li a .plan_bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hall_plan .plan_list ul li a .plan_text_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.hall_plan .plan_list ul li a .plan_text_box h3 {
+  font-size: 24px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2.4px;
+  line-height: 1.4583333333;
+}
+.hall_plan .plan_list ul li a .plan_text_box p {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  font-weight: 100;
+  transform: translateX(5%);
+}
+.hall_plan .plan_list ul li .plan_first .plan_bg {
+  background: url(../img/title-pc/syokibo-pc.jpg) no-repeat center center/cover;
+}
+.hall_plan .plan_list ul li .plan_second .plan_bg {
+  background: url(../img/title-pc/tyukibo-pc.jpg) no-repeat center center/cover;
+}
+.hall_plan .plan_list ul li .plan_third .plan_bg {
+  background: url(../img/title-pc/daikibo-pc.jpg) no-repeat center center/cover;
 }/*# sourceMappingURL=style.css.map */

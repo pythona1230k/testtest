@@ -15,7 +15,8 @@ $font_sub: "Shippori Mincho", serif;
 //media
 $breakpoints: (
   "sp": "screen and (max-width:767px)",
-  "pc": "screen and (min-width:768px)",
+  "tab": "screen and (min-width:768px) and (max-width:1279px)",
+  "pc": "screen and (min-width:1280px)",
 ) !default;
 
 @mixin mq($breakpoint: sp) {
@@ -33,10 +34,15 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   max-width: 100%;
-  font-weight: 400;
+  font-weight: 300;
   &.active {
     overflow: hidden;
   }
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .iOS_body {
@@ -110,6 +116,9 @@ header {
   height: 86px;
   padding: 19px 58px;
   position: relative;
+  @include mq(tab) {
+    padding: 19px 5%;
+  }
 
   @include mq(sp) {
     position: absolute;
@@ -130,6 +139,9 @@ header {
         height: 100%;
         display: block;
         width: 167px;
+        @include mq(tab) {
+          width: 120px;
+        }
         img {
           width: 100%;
         }
@@ -152,14 +164,23 @@ header {
             position: absolute;
             top: 0;
             right: -12px;
+            @include mq(tab) {
+              right: -6px;
+            }
           }
           &:not(:last-child) {
             margin-right: 24px;
+            @include mq(tab) {
+              margin-right: 12px;
+            }
           }
           a {
             color: $nav_color;
             height: 86px;
             position: relative;
+            @include mq(tab) {
+              font-size: 14px;
+            }
             &:hover {
               &::before {
                 content: "";
@@ -187,6 +208,10 @@ header {
     padding: 12px 0;
     color: $white_color;
     transition: all 0.3s, outline 0.1s;
+    @include mq(tab) {
+      width: 100px;
+      font-size: 12px;
+    }
     @include mq(sp) {
       display: none;
     }
@@ -265,14 +290,13 @@ header {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-38%, -50%);
+            transform: translate(-50%, -50%);
             z-index: 3;
-
-            h3 {
-              font-size: 24px;
+            .plan_list_title {
               font-family: $font_sub;
               letter-spacing: 2.4px;
               line-height: calc(35 / 24);
+              font-size: 24px;
             }
             p {
               font-size: 16px;
@@ -856,10 +880,11 @@ header {
   background-color: #f8f7fc;
   padding-bottom: 136px;
 
+  @include mq(tab) {
+    padding: 0 3% 136px;
+  }
   @include mq(sp) {
     padding: 0 11px 112px;
-    // width: 100%;
-    // margin: 0 auto;
   }
 
   .util_dot {
@@ -887,6 +912,7 @@ header {
       @include mq(sp) {
         margin-bottom: 20px;
       }
+
       &::before {
         content: "";
         width: 5px;
@@ -914,6 +940,11 @@ header {
     display: flex;
     justify-content: center;
 
+    @include mq(tab) {
+      display: block;
+      display: grid;
+    }
+
     @include mq(sp) {
       display: block;
       display: grid;
@@ -921,6 +952,10 @@ header {
     // second
     .one_day_funeral {
       margin-right: 78px;
+
+      @include mq(tab) {
+        margin-bottom: 48px;
+      }
       @include mq(sp) {
         margin-bottom: 60px;
         margin-right: 0;
@@ -1049,6 +1084,10 @@ header {
 // access
 .access {
   margin-bottom: 136px;
+  padding: 0 19.4%;
+  @include mq(tab) {
+    padding: 0 5%;
+  }
   @include mq(sp) {
     padding: 0 11px;
     width: 100%;
@@ -1062,7 +1101,7 @@ header {
     ul {
       display: flex;
       justify-content: center;
-      gap: 25px;
+      gap: 1.8%;
 
       @include mq(sp) {
         display: block;
@@ -1070,11 +1109,15 @@ header {
       li {
         .access_item_title {
           font-size: 24px;
+          font-weight: 500;
           font-family: $font_sub;
           letter-spacing: 2.4px;
           padding-left: 13px;
           margin-bottom: 12px;
           position: relative;
+          @include mq(tab) {
+            font-size: 20px;
+          }
           &::before {
             content: "";
             width: 5px;
@@ -1086,8 +1129,8 @@ header {
           }
         }
         img {
-          width: 350px;
-          height: 263px;
+          width: 100%;
+          height: auto;
           margin-bottom: 19px;
           @include mq(sp) {
             width: 100%;
@@ -1095,13 +1138,15 @@ header {
             object-fit: cover;
           }
         }
-        .access_item_text {
+        p {
           margin-bottom: 58px;
+          letter-spacing: 1.4px;
+          line-height: calc(22.4 / 14);
+          @include mq(tab) {
+            font-size: 14px;
+          }
           @include mq(sp) {
             margin-bottom: 48px;
-          }
-          p {
-            line-height: calc(22.4 / 14);
           }
         }
       }
@@ -1399,6 +1444,9 @@ footer {
   @include mq(pc) {
     display: none;
   }
+  @include mq(tab) {
+    display: none;
+  }
   position: fixed;
   bottom: 20px;
   left: 50%;
@@ -1441,6 +1489,312 @@ footer {
         }
         p {
           font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////////////
+/// hall.html
+////////////////////////////////////////////////
+
+.hall_main {
+  height: 144px;
+  background: url(../img/title-pc/hole_second_pc.png) no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  h2 {
+    color: $white_color;
+    font-size: 32px;
+    letter-spacing: 3.2px;
+    font-family: $font_sub;
+    z-index: 2;
+  }
+}
+
+.hall_access {
+  padding: 0 134px;
+  h2 {
+    margin-bottom: 51px;
+  }
+  .access_item_box {
+    ul {
+      li {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 96px;
+        &:nth-of-type(2) {
+          flex-direction: row-reverse;
+        }
+        img {
+          width: 535px;
+        }
+        .access_item_text {
+          width: 535px;
+          .access_item_title {
+            font-size: 24px;
+            font-weight: 500;
+            font-family: $font_sub;
+            letter-spacing: 2.4px;
+            padding-left: 13px;
+            margin-bottom: 12px;
+            position: relative;
+            &::before {
+              content: "";
+              width: 5px;
+              height: 100%;
+              background-color: #e8c3eb;
+              position: absolute;
+              left: 0;
+              top: 0;
+            }
+          }
+          p {
+            letter-spacing: 1.6px;
+            line-height: calc(25.6 / 16);
+            margin-bottom: 19px;
+          }
+          iframe {
+            display: block;
+            width: 100%;
+            height: 261px;
+          }
+        }
+      }
+    }
+  }
+
+  // access_area
+  .access_area {
+    max-width: 701px;
+    margin: 0 auto;
+    text-align: center;
+    outline: 1px solid #c89bd3;
+    .access_area_title {
+      line-height: 45px;
+      font-size: 20px;
+      letter-spacing: 2px;
+      color: $white_color;
+      background-color: #c89bd3;
+    }
+
+    .access_area_text {
+      padding: 24px 0;
+      max-width: 445px;
+      margin: 0 auto 57px;
+      text-align: left;
+      @include mq(sp) {
+        padding: 18px 54px;
+      }
+      dl {
+        dt {
+          font-size: 18px;
+          color: #cf94d6;
+          letter-spacing: 1.8px;
+          font-weight: 600;
+          line-height: calc(25.6 / 18);
+        }
+        dd {
+          font-size: 16px;
+          letter-spacing: 1.6px;
+          line-height: calc(25.6 / 16);
+        }
+        .access_area_text_first {
+          margin-bottom: 14px;
+        }
+      }
+    }
+  }
+}
+
+.indoor_introduction {
+  background-color: #f8f7fc;
+  h2 {
+    margin-bottom: 51px;
+  }
+  .hall_list {
+    max-width: 1366px;
+    margin: 0 auto;
+    padding: 0 134px 200px;
+    position: relative;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      gap: 24px;
+      li {
+        width: calc((100% - 48px) / 3);
+        height: 486px;
+        &:first-child {
+          margin-bottom: 65px;
+        }
+        h3 {
+          font-size: 20px;
+          font-weight: 500;
+          font-family: $font_sub;
+          letter-spacing: 2.4px;
+          padding-left: 13px;
+          margin-bottom: 12px;
+          position: relative;
+          &::before {
+            content: "";
+            width: 5px;
+            height: 100%;
+            background-color: #e8c3eb;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
+        img {
+          width: 100%;
+          height: 232px;
+          object-fit: cover;
+          margin-bottom: 18px;
+        }
+        p {
+          letter-spacing: 1.6px;
+          line-height: calc(28.8 / 16);
+        }
+        .text {
+          margin-top: 17px;
+          font-size: 12px;
+          letter-spacing: 1.2px;
+          line-height: 1.2;
+        }
+      }
+    }
+    .caution {
+      font-size: 14px;
+      letter-spacing: 1.4px;
+      position: absolute;
+      bottom: 133px;
+      right: 133px;
+    }
+  }
+}
+
+// plan
+.hall_plan {
+  padding: 0 9.7% 136px 9.7%;
+
+  @include mq(sp) {
+    padding: 0 11px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .util_title_another {
+    margin-bottom: 44px;
+
+    @include mq(sp) {
+      margin-bottom: 32px;
+    }
+  }
+
+  .plan_list {
+    padding-bottom: 40px;
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      @include mq(sp) {
+        display: block;
+        width: 100%;
+      }
+      li {
+        width: 356px;
+        height: 128px;
+        @include mq(sp) {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: relative;
+          color: $white_color;
+          overflow: hidden;
+
+          &:hover {
+            .plan_bg {
+              transform: scale(1.2);
+            }
+          }
+
+          .plan_bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            transition: transform 0.7s;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: #000;
+              opacity: 0.75;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          .plan_text_box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+
+            h3 {
+              font-size: 24px;
+              font-family: $font_sub;
+              letter-spacing: 2.4px;
+              line-height: calc(35 / 24);
+            }
+            p {
+              font-size: 16px;
+              letter-spacing: 1.6px;
+              line-height: calc(24 / 16);
+              font-weight: 100;
+              transform: translateX(5%);
+            }
+          }
+        }
+        .plan_first {
+          .plan_bg {
+            background: url(../img/title-pc/syokibo-pc.jpg) no-repeat center center / cover;
+          }
+        }
+        .plan_second {
+          .plan_bg {
+            background: url(../img/title-pc/tyukibo-pc.jpg) no-repeat center center / cover;
+          }
+        }
+        .plan_third {
+          .plan_bg {
+            background: url(../img/title-pc/daikibo-pc.jpg) no-repeat center center / cover;
+          }
         }
       }
     }
