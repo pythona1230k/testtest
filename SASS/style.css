@@ -681,7 +681,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 
 .plan {
   background-color: #f8f7fc;
-  padding: 0 9.7% 0 9.7%;
+  padding: 0 133px 0 133px;
 }
 @media screen and (max-width:767px) {
   .plan {
@@ -754,10 +754,14 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 .plan .plan_list ul li a .plan_text_box {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 33px;
+  left: 30%;
   z-index: 3;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .plan .plan_list ul li a .plan_text_box {
+    left: 37px;
+  }
 }
 .plan .plan_list ul li a .plan_text_box h3 {
   font-size: 24px;
@@ -1064,7 +1068,8 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 @media screen and (min-width:768px) and (max-width:1279px) {
   .access .access_item_box ul li p {
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1.2px;
   }
 }
 @media screen and (max-width:767px) {
@@ -1572,7 +1577,7 @@ footer .copy p small {
 }
 
 .hall_plan {
-  padding: 0 9.7% 136px 9.7%;
+  padding: 0 133px 136px 133px;
 }
 @media screen and (max-width:767px) {
   .hall_plan {
@@ -1645,10 +1650,14 @@ footer .copy p small {
 }
 .hall_plan .plan_list ul li a .plan_text_box {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 33px;
+  left: 30%;
   z-index: 3;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .hall_plan .plan_list ul li a .plan_text_box {
+    left: 37px;
+  }
 }
 .hall_plan .plan_list ul li a .plan_text_box h3 {
   font-size: 24px;
