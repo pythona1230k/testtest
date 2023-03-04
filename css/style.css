@@ -297,7 +297,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
   transform: rotate(-10deg);
 }
 #nav_area .sp_nav .tell_box:hover .tell_item a::after {
-  right: -22px;
+  right: -19px;
 }
 #nav_area .sp_nav .tell_box p {
   color: #cf94d6;
@@ -335,9 +335,9 @@ header .plan_list_item ul li .plan_third .plan_bg {
   border-color: transparent transparent transparent #cf94d6;
   position: absolute;
   top: 50%;
-  transform: translateY(-48%);
+  transform: translateY(-50%);
   right: -15px;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 #nav_area .sp_nav nav {
   text-align: left;

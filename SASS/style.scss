@@ -34,7 +34,7 @@ body {
   box-sizing: border-box;
   max-width: 100%;
   font-weight: 400;
-  &.active{
+  &.active {
     overflow: hidden;
   }
 }
@@ -344,7 +344,7 @@ header {
             transform: rotate(-10deg);
           }
           a::after {
-            right: -22px;
+            right: -19px;
           }
         }
       }
@@ -382,9 +382,9 @@ header {
             border-color: transparent transparent transparent #cf94d6;
             position: absolute;
             top: 50%;
-            transform: translateY(-48%);
+            transform: translateY(-50%);
             right: -15px;
-            transition: all 0.3s;
+            transition: all 0.5s;
           }
         }
       }

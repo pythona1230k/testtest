@@ -1,4 +1,4 @@
-// header nav hover action
+// plan accordion (pc)
 const planList = document.querySelector('#plan_list');
 const planListItem = document.querySelector('.plan_list_item');
 
@@ -12,6 +12,8 @@ planList.addEventListener('mouseout', function () {
     }
   }, 2000);
 })
+
+planList
 
 planListItem.addEventListener('mouseover', function () {
   planListItem.classList.add('active')
@@ -46,7 +48,7 @@ mask.onclick = () => {
 
 
 
-// accordion
+// plan accordion (sp in hambager)
 const planListTarget = document.querySelector('#plan_list_target');
 const planListDrop = document.querySelector('#plan_list_drop');
 
@@ -59,6 +61,21 @@ planListTarget.addEventListener('mouseover', function () {
     planListDrop.classList.remove('active')
   })
 })
+
+planListTarget.addEventListener('click', function () {
+  planListDrop.classList.add('active')
+  this.classList.add('open')
+
+  this.addEventListener('mouseout', function () {
+    planListTarget.classList.remove('open')
+    planListDrop.classList.remove('active')
+  })
+})
+
+// planListTarget.addEventListener('click', function(){
+//   this.classList.remove('open')
+//   planListDrop.classList.remove('close')
+// })
 
 planListDrop.addEventListener('mouseover', function () {
   planListDrop.classList.add('active')
