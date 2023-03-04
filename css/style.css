@@ -267,7 +267,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 #nav_area .sp_nav {
   position: fixed;
-  top: 10px;
+  top: 19px;
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
@@ -281,6 +281,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 #nav_area .sp_nav .nav_area_logo {
   margin-bottom: 64px;
+  text-align: center;
 }
 #nav_area .sp_nav .nav_area_logo a {
   display: block;

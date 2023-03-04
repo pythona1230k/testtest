@@ -313,7 +313,7 @@ header {
   // menu
   .sp_nav {
     position: fixed;
-    top: 10px;
+    top: 19px;
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
@@ -326,6 +326,7 @@ header {
     }
     .nav_area_logo {
       margin-bottom: 64px;
+      text-align: center;
       a {
         display: block;
         img {
