@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>有限会社雅 雅ホール</title>
+  <link rel="stylesheet" href="./SASS/reset.css">
+  <link rel="stylesheet" href="./SASS/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+
+<body>
+  <div class="iOS_body">
+    <!-- header -->
+    <header>
+      <div class="item_box inner">
+        <h1>
+          <a href="index.html">
+            <img src="./img/logo.png" alt="ロゴ">
+          </a>
+        </h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="#access">ホールのご案内</a></li>
+            <li><a id="plan_list" href="#plan">プランのご案内</a></li>
+            <li><a href="">贈り物</a></li>
+            <li><a href="">雅の会</a></li>
+            <li><a href="">よくある質問</a></li>
+          </ul>
+        </nav>
+        <a href="" class="header_contact">
+          <p>
+            <i class="fa-solid fa-phone-volume"></i>
+            お問い合わせ
+          </p>
+        </a>
+      </div>
+      <!-- hover plan_list -->
+      <div class="plan_list_item">
+        <ul>
+          <li>
+            <a href="" class="plan_first">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">小規模プラン</h3>
+                <p class="plan_list_text">44万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="plan_second">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">中規模プラン</h3>
+                <p class="plan_list_text">88万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="" class="plan_third">
+              <div class="plan_bg"></div>
+              <div class="plan_text_box">
+                <h3 class="plan_list_title">大規模プラン</h3>
+                <p class="plan_list_text">110万円（税込）～</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- hamburger -->
+    <div id="nav_area">
+      <!-- menu -->
+      <div class="sp_nav">
+        <h1 class="nav_area_logo">
+          <a href="index.html">
+            <img src="./img/logo.png" alt="ロゴ">
+          </a>
+        </h1>
+        <div class="tell_box">
+          <p>24時間365日受付</p>
+          <div class="tell_item">
+            <i class="fa-solid fa-phone-volume"></i>
+            <a href="tel:0120-10-8741">0120-10-8741</a>
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#access">ホールのご案内</a></li>
+            <li><a href="#plan" id="plan_list_target">プランのご案内</a></li>
+            <ul id="plan_list_drop">
+              <li><a href="">小規模プラン</a></li>
+              <li><a href="">中規模プラン</a></li>
+              <li><a href="">大規模プラン</a></li>
+            </ul>
+            <li><a href="">贈り物</a></li>
+            <li><a href="">雅の会</a></li>
+            <li><a href="">よくある質問</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- btn -->
+      <div class="toggle_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- mask -->
+      <div id="mask"></div>
+    </div>
