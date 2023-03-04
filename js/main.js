@@ -28,17 +28,20 @@ planListItem.addEventListener('mouseout', function () {
 const btn = document.querySelector('.toggle_btn');
 const inner = document.querySelector('.sp_nav');
 const mask = document.querySelector('#mask');
+const body = document.querySelector('body');
 
 btn.onclick = () => {
   inner.classList.toggle('active');
   mask.classList.toggle('active');
   btn.classList.toggle('active');
+  body.classList.toggle('active');
 };
 
 mask.onclick = () => {
-  inner.classList.toggle('active');
-  mask.classList.toggle('active');
-  btn.classList.toggle('active');
+  inner.classList.remove('active');
+  mask.classList.remove('active');
+  btn.classList.remove('active');
+  body.classList.remove('active');
 };
 
 
@@ -50,24 +53,22 @@ const planListDrop = document.querySelector('#plan_list_drop');
 planListTarget.addEventListener('mouseover', function () {
   planListDrop.classList.add('active')
   this.classList.add('open')
-})
-planListTarget.addEventListener('mouseout', function () {
-  setTimeout(function () {
-    if (!planListDrop.classList.contains('active')) {
-      planListDrop.classList.remove('active');
-    }
-  }, 1000);
+
+  this.addEventListener('mouseout', function () {
+    planListTarget.classList.remove('open')
+    planListDrop.classList.remove('active')
+  })
 })
 
 planListDrop.addEventListener('mouseover', function () {
   planListDrop.classList.add('active')
+  planListTarget.classList.add('open')
 })
 
 planListDrop.addEventListener('mouseout', function () {
   planListDrop.classList.remove('active')
   planListTarget.classList.remove('open');
 })
-
 
 
 //top scroll
