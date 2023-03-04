@@ -52,40 +52,46 @@ mask.onclick = () => {
 const planListTarget = document.querySelector('#plan_list_target');
 const planListDrop = document.querySelector('#plan_list_drop');
 
-planListTarget.addEventListener('mouseover', function () {
-  planListDrop.classList.add('active')
-  this.classList.add('open')
-
-  this.addEventListener('mouseout', function () {
-    planListTarget.classList.remove('open')
-    planListDrop.classList.remove('active')
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // スマートフォンやタブレットの場合の処理
+  planListTarget.addEventListener('click', function(){
+    this.classList.toggle('open')
+    planListDrop.classList.toggle('active')
   })
-})
+} else {
+  // PCの場合の処理
+  planListTarget.addEventListener('mouseover', function () {
+    planListDrop.classList.add('active')
+    this.classList.add('open')
 
-planListTarget.addEventListener('click', function () {
-  planListDrop.classList.add('active')
-  this.classList.add('open')
-
-  this.addEventListener('mouseout', function () {
-    planListTarget.classList.remove('open')
-    planListDrop.classList.remove('active')
+    this.addEventListener('mouseout', function () {
+      planListTarget.classList.remove('open')
+      planListDrop.classList.remove('active')
+    })
   })
-})
 
-// planListTarget.addEventListener('click', function(){
-//   this.classList.remove('open')
-//   planListDrop.classList.remove('close')
+  planListDrop.addEventListener('mouseover', function () {
+    planListDrop.classList.add('active')
+    planListTarget.classList.add('open')
+  })
+
+  planListDrop.addEventListener('mouseout', function () {
+    planListDrop.classList.remove('active')
+    planListTarget.classList.remove('open');
+  })
+}
+
+// planListTarget.addEventListener('click', function () {
+//   planListDrop.classList.add('active')
+//   this.classList.add('open')
+
+//   this.addEventListener('mouseout', function () {
+//     planListTarget.classList.remove('open')
+//     planListDrop.classList.remove('active')
+//   })
 // })
 
-planListDrop.addEventListener('mouseover', function () {
-  planListDrop.classList.add('active')
-  planListTarget.classList.add('open')
-})
 
-planListDrop.addEventListener('mouseout', function () {
-  planListDrop.classList.remove('active')
-  planListTarget.classList.remove('open');
-})
 
 
 //top scroll
