@@ -365,7 +365,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
   position: relative;
 }
 #nav_area .sp_nav nav ul li a#plan_list_target.open::after {
-  transform: rotate(-180deg);
+  transform: rotate(0deg);
 }
 #nav_area .sp_nav nav ul li a#plan_list_target::after {
   content: "";
@@ -373,6 +373,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
   background-image: url(../img/arrow_icon.png);
   background-repeat: no-repeat;
   background-size: contain;
+  transform: rotate(-180deg);
   width: 15px;
   height: 8px;
   position: absolute;

@@ -63,7 +63,7 @@ body {
   padding-top: 54px;
   letter-spacing: 2.8px;
   font-weight: 700;
-  
+
   @include mq(sp) {
     padding-top: 28px;
   }
@@ -415,7 +415,7 @@ header {
 
               &.open {
                 &::after {
-                  transform: rotate(-180deg);
+                  transform: rotate(0deg);
                 }
               }
 
@@ -425,6 +425,7 @@ header {
                 background-image: url(../img/arrow_icon.png);
                 background-repeat: no-repeat;
                 background-size: contain;
+                transform: rotate(-180deg);
                 width: 15px;
                 height: 8px;
                 position: absolute;
