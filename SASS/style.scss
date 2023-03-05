@@ -835,12 +835,12 @@ header {
 
           .plan_text_box {
             position: absolute;
-            top: 33px;
-            left: 30%;
+            // top: 33px;
+            // left: 30%;
             z-index: 3;
-            @include mq(tab) {
-              left: 37px;
-            }
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
             h3 {
               font-size: 24px;
