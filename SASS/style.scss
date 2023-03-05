@@ -118,6 +118,7 @@ header {
   position: relative;
   @include mq(tab) {
     padding: 19px 5%;
+    height: 79px;
   }
 
   @include mq(sp) {
@@ -252,12 +253,14 @@ header {
         width: 356px;
         height: 128px;
         a {
-          display: block;
           width: 100%;
           height: 100%;
           position: relative;
           color: $white_color;
           overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           &:hover {
             .plan_bg {
@@ -288,9 +291,6 @@ header {
 
           .plan_text_box {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             z-index: 3;
             .plan_list_title {
               font-family: $font_sub;
@@ -766,6 +766,9 @@ header {
 .plan {
   background-color: #f8f7fc;
   padding: 0 133px 0 133px;
+  @include mq(tab) {
+    padding: 0 11px 136px;
+  }
 
   @include mq(sp) {
     padding: 0 11px;
@@ -799,12 +802,14 @@ header {
           margin-bottom: 16px;
         }
         a {
-          display: block;
           width: 100%;
           height: 100%;
           position: relative;
           color: $white_color;
           overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           &:hover {
             .plan_bg {
@@ -835,12 +840,10 @@ header {
 
           .plan_text_box {
             position: absolute;
-            // top: 33px;
-            // left: 30%;
             z-index: 3;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
 
             h3 {
               font-size: 24px;
@@ -930,7 +933,7 @@ header {
       height: 267px;
 
       @include mq(sp) {
-        width: 353px;
+        max-width: 353px;
         height: auto;
         margin: 0 auto;
       }
@@ -987,7 +990,7 @@ header {
         height: 267px;
 
         @include mq(sp) {
-          width: 353px;
+          max-width: 353px;
           height: auto;
           margin: 0 auto;
         }
@@ -1021,7 +1024,7 @@ header {
         height: 267px;
 
         @include mq(sp) {
-          width: 353px;
+          max-width: 353px;
           height: auto;
           margin: 0 auto;
         }
@@ -1039,13 +1042,13 @@ header {
     .main_link_item {
       &:first-child {
         background: url(../img/okurimono.jpg) no-repeat center center / cover;
-        width: 353px;
+        max-width: 353px;
         margin: 0 auto 25px;
         box-shadow: 0px 0px 6px #00000029;
       }
       &:last-of-type {
         background: url(../img/miyabinokai.jpg) no-repeat center center / cover;
-        width: 353px;
+        max-width: 353px;
         margin: 0 auto;
         box-shadow: 0px 0px 6px #00000029;
       }
@@ -1501,6 +1504,223 @@ footer {
 ////////////////////////////////////////////////
 /// hall.html
 ////////////////////////////////////////////////
+// header
+header.hall_header {
+  height: 86px;
+  padding: 19px 58px;
+  position: relative;
+  @include mq(tab) {
+    padding: 19px 5%;
+    height: 79px;
+  }
+
+  @include mq(sp) {
+    height: 60px;
+    padding: 12px 11px;
+    z-index: 3;
+  }
+  .item_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mq(sp) {
+      display: block;
+    }
+
+    h1 {
+      a {
+        height: 100%;
+        display: block;
+        width: 167px;
+        @include mq(tab) {
+          width: 120px;
+        }
+        @include mq(sp) {
+          width: 125px;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    nav {
+      @include mq(sp) {
+        display: none;
+      }
+      ul {
+        display: flex;
+        li {
+          position: relative;
+          &:not(:last-child)::after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            background-color: $nav_color;
+            position: absolute;
+            top: 0;
+            right: -12px;
+            @include mq(tab) {
+              right: -6px;
+            }
+          }
+          &:not(:last-child) {
+            margin-right: 24px;
+            @include mq(tab) {
+              margin-right: 12px;
+            }
+          }
+          a {
+            color: $nav_color;
+            height: 86px;
+            position: relative;
+            @include mq(tab) {
+              font-size: 14px;
+            }
+            &:hover {
+              &::before {
+                content: "";
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $nav_color;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -8px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header_contact {
+    width: 203px;
+    background-color: #ded2a9;
+    border-radius: 4px;
+    text-align: center;
+    padding: 12px 0;
+    color: $white_color;
+    transition: all 0.3s, outline 0.1s;
+    @include mq(tab) {
+      width: 100px;
+      font-size: 12px;
+    }
+    @include mq(sp) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: $white_color;
+      outline: 1px solid #ded2a9;
+      color: #ded2a9;
+    }
+  }
+
+  // plan_list
+  .plan_list_item {
+    padding: 20px 133px;
+    background-color: #f8f7fc;
+    position: absolute;
+    top: 86px;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s, visibility 0.8s;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    &.hover_now {
+      opacity: 0.3;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      li {
+        width: 356px;
+        height: 128px;
+        a {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          color: $white_color;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          &:hover {
+            .plan_bg {
+              transform: scale(1.2);
+            }
+          }
+
+          .plan_bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            left: 0;
+            transition: transform 0.7s;
+
+            &::after {
+              content: "";
+              width: 100%;
+              height: 100%;
+              background-color: #000;
+              opacity: 0.75;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          .plan_text_box {
+            position: absolute;
+            z-index: 3;
+            .plan_list_title {
+              font-family: $font_sub;
+              letter-spacing: 2.4px;
+              line-height: calc(35 / 24);
+              font-size: 24px;
+            }
+            p {
+              font-size: 16px;
+              letter-spacing: 1.6px;
+              line-height: calc(24 / 16);
+              font-weight: 100;
+              transform: translateX(5%);
+            }
+          }
+        }
+        .plan_first {
+          .plan_bg {
+            background: url(../img/title-pc/syokibo-pc.jpg) no-repeat center center / cover;
+          }
+        }
+        .plan_second {
+          .plan_bg {
+            background: url(../img/title-pc/tyukibo-pc.jpg) no-repeat center center / cover;
+          }
+        }
+        .plan_third {
+          .plan_bg {
+            background: url(../img/title-pc/daikibo-pc.jpg) no-repeat center center / cover;
+          }
+        }
+      }
+    }
+  }
+}
 
 .hall_main {
   height: 144px;
@@ -1509,6 +1729,9 @@ footer {
   justify-content: center;
   align-items: center;
   position: relative;
+  @include mq(sp) {
+    height: 112px;
+  }
   &::after {
     content: "";
     width: 100%;
@@ -1531,6 +1754,13 @@ footer {
 
 .hall_access {
   padding: 0 134px;
+
+  @include mq(tab) {
+    padding: 0 11px;
+  }
+  @include mq(sp) {
+    padding: 0 11px;
+  }
   h2 {
     margin-bottom: 51px;
   }
@@ -1541,14 +1771,53 @@ footer {
         gap: 20px;
         justify-content: center;
         margin-bottom: 96px;
+        height: 393px;
+        @include mq(sp) {
+          display: block;
+          max-width: 100%;
+          margin: 0 auto 48px;
+          height: auto;
+        }
         &:nth-of-type(2) {
           flex-direction: row-reverse;
         }
+        .access_item_sp_title {
+          font-size: 24px;
+          font-weight: 500;
+          font-family: $font_sub;
+          letter-spacing: 2.4px;
+          padding-left: 13px;
+          margin-bottom: 12px;
+          position: relative;
+          @include mq(pc) {
+            display: none;
+          }
+          @include mq(tab) {
+            display: none;
+          }
+          &::before {
+            content: "";
+            width: 5px;
+            height: 100%;
+            background-color: #e8c3eb;
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+        }
         img {
-          width: 535px;
+          width: 50%;
+          @include mq(sp) {
+            width: 100%;
+            height: 264px;
+            margin-bottom: 16px;
+          }
         }
         .access_item_text {
-          width: 535px;
+          width: 50%;
+          @include mq(sp) {
+            width: 100%;
+          }
           .access_item_title {
             font-size: 24px;
             font-weight: 500;
@@ -1557,6 +1826,9 @@ footer {
             padding-left: 13px;
             margin-bottom: 12px;
             position: relative;
+            @include mq(sp) {
+              display: none;
+            }
             &::before {
               content: "";
               width: 5px;
@@ -1571,6 +1843,11 @@ footer {
             letter-spacing: 1.6px;
             line-height: calc(25.6 / 16);
             margin-bottom: 19px;
+            @include mq(sp) {
+              font-size: 14px;
+              letter-spacing: 1.4px;
+              line-height: calc(22.4 / 14);
+            }
           }
           iframe {
             display: block;
@@ -1588,6 +1865,9 @@ footer {
     margin: 0 auto;
     text-align: center;
     outline: 1px solid #c89bd3;
+    @include mq(sp) {
+      max-width: 100%;
+    }
     .access_area_title {
       line-height: 45px;
       font-size: 20px;
@@ -1603,6 +1883,7 @@ footer {
       text-align: left;
       @include mq(sp) {
         padding: 18px 54px;
+        margin: 0 auto 112px;
       }
       dl {
         dt {
@@ -1635,16 +1916,38 @@ footer {
     margin: 0 auto;
     padding: 0 134px 200px;
     position: relative;
+    @include mq(tab) {
+      padding: 0 2% 200px;
+    }
+    @include mq(sp) {
+      padding: 0 11px 200px;
+      max-width: 100%;
+    }
     ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: left;
       gap: 24px;
+      @include mq(tab) {
+        gap: 12px;
+      }
+      @include mq(sp) {
+        display: block;
+      }
       li {
         width: calc((100% - 48px) / 3);
-        height: 486px;
-        &:first-child {
-          margin-bottom: 65px;
+        &:nth-child(-n + 3) {
+          margin-bottom: 64px;
+        }
+        @include mq(tab) {
+          width: calc((100% - 24px) / 2);
+          &:not(:last-of-type) {
+            margin-bottom: 54px;
+          }
+        }
+        @include mq(sp) {
+          width: 100%;
+          margin: 0 auto;
         }
         h3 {
           font-size: 20px;
@@ -1654,6 +1957,10 @@ footer {
           padding-left: 13px;
           margin-bottom: 12px;
           position: relative;
+          @include mq(sp) {
+            margin-bottom: 17px;
+            margin-top: 58px;
+          }
           &::before {
             content: "";
             width: 5px;
@@ -1669,16 +1976,28 @@ footer {
           height: 232px;
           object-fit: cover;
           margin-bottom: 18px;
+          @include mq(sp) {
+            margin-bottom: 16px;
+          }
         }
         p {
           letter-spacing: 1.6px;
           line-height: calc(28.8 / 16);
+          @include mq(sp) {
+            font-size: 14px;
+            letter-spacing: 1.4px;
+            line-height: calc(22.4 / 14);
+          }
         }
         .text {
           margin-top: 17px;
           font-size: 12px;
           letter-spacing: 1.2px;
           line-height: 1.2;
+          @include mq(sp) {
+            font-size: 10px;
+            letter-spacing: 1px;
+          }
         }
       }
     }
@@ -1688,6 +2007,14 @@ footer {
       position: absolute;
       bottom: 133px;
       right: 133px;
+      text-align: right;
+      width: 100%;
+      @include mq(sp) {
+        max-width: 353px;
+        font-size: 12px;
+        letter-spacing: 1.2px;
+        right: 2.93%;
+      }
     }
   }
 }
@@ -1695,6 +2022,10 @@ footer {
 // plan
 .hall_plan {
   padding: 0 133px 136px 133px;
+
+  @include mq(tab) {
+    padding: 0 11px 136px;
+  }
 
   @include mq(sp) {
     padding: 0 11px;
@@ -1728,12 +2059,14 @@ footer {
           margin-bottom: 16px;
         }
         a {
-          display: block;
           width: 100%;
           height: 100%;
           position: relative;
           color: $white_color;
           overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
           &:hover {
             .plan_bg {
@@ -1764,12 +2097,7 @@ footer {
 
           .plan_text_box {
             position: absolute;
-            top: 33px;
-            left: 30%;
             z-index: 3;
-            @include mq(tab) {
-              left: 37px;
-            }
 
             h3 {
               font-size: 24px;

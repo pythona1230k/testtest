@@ -94,6 +94,7 @@ header {
 @media screen and (min-width:768px) and (max-width:1279px) {
   header {
     padding: 19px 5%;
+    height: 79px;
   }
 }
 @media screen and (max-width:767px) {
@@ -235,12 +236,14 @@ header .plan_list_item ul li {
   height: 128px;
 }
 header .plan_list_item ul li a {
-  display: block;
   width: 100%;
   height: 100%;
   position: relative;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header .plan_list_item ul li a:hover .plan_bg {
   transform: scale(1.2);
@@ -266,9 +269,6 @@ header .plan_list_item ul li a .plan_bg::after {
 }
 header .plan_list_item ul li a .plan_text_box {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   z-index: 3;
 }
 header .plan_list_item ul li a .plan_text_box .plan_list_title {
@@ -683,6 +683,11 @@ header .plan_list_item ul li .plan_third .plan_bg {
   background-color: #f8f7fc;
   padding: 0 133px 0 133px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .plan {
+    padding: 0 11px 136px;
+  }
+}
 @media screen and (max-width:767px) {
   .plan {
     padding: 0 11px;
@@ -723,12 +728,14 @@ header .plan_list_item ul li .plan_third .plan_bg {
   }
 }
 .plan .plan_list ul li a {
-  display: block;
   width: 100%;
   height: 100%;
   position: relative;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .plan .plan_list ul li a:hover .plan_bg {
   transform: scale(1.2);
@@ -755,9 +762,6 @@ header .plan_list_item ul li .plan_third .plan_bg {
 .plan .plan_list ul li a .plan_text_box {
   position: absolute;
   z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .plan .plan_list ul li a .plan_text_box h3 {
   font-size: 24px;
@@ -842,7 +846,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 @media screen and (max-width:767px) {
   .flow .general_funeral img {
-    width: 353px;
+    max-width: 353px;
     height: auto;
     margin: 0 auto;
   }
@@ -905,7 +909,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 @media screen and (max-width:767px) {
   .flow .funeral_box .one_day_funeral img {
-    width: 353px;
+    max-width: 353px;
     height: auto;
     margin: 0 auto;
   }
@@ -938,7 +942,7 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 @media screen and (max-width:767px) {
   .flow .funeral_box .direct_burial img {
-    width: 353px;
+    max-width: 353px;
     height: auto;
     margin: 0 auto;
   }
@@ -953,13 +957,13 @@ header .plan_list_item ul li .plan_third .plan_bg {
 }
 .flow .main_link_box .main_link_item:first-child {
   background: url(../img/okurimono.jpg) no-repeat center center/cover;
-  width: 353px;
+  max-width: 353px;
   margin: 0 auto 25px;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
 }
 .flow .main_link_box .main_link_item:last-of-type {
   background: url(../img/miyabinokai.jpg) no-repeat center center/cover;
-  width: 353px;
+  max-width: 353px;
   margin: 0 auto;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
 }
@@ -1388,6 +1392,218 @@ footer .copy p small {
   font-size: 12px;
 }
 
+header.hall_header {
+  height: 86px;
+  padding: 19px 58px;
+  position: relative;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header {
+    padding: 19px 5%;
+    height: 79px;
+  }
+}
+@media screen and (max-width:767px) {
+  header.hall_header {
+    height: 60px;
+    padding: 12px 11px;
+    z-index: 3;
+  }
+}
+header.hall_header .item_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width:767px) {
+  header.hall_header .item_box {
+    display: block;
+  }
+}
+header.hall_header .item_box h1 a {
+  height: 100%;
+  display: block;
+  width: 167px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .item_box h1 a {
+    width: 120px;
+  }
+}
+@media screen and (max-width:767px) {
+  header.hall_header .item_box h1 a {
+    width: 125px;
+  }
+}
+header.hall_header .item_box h1 a img {
+  width: 100%;
+}
+@media screen and (max-width:767px) {
+  header.hall_header .item_box nav {
+    display: none;
+  }
+}
+header.hall_header .item_box nav ul {
+  display: flex;
+}
+header.hall_header .item_box nav ul li {
+  position: relative;
+}
+header.hall_header .item_box nav ul li:not(:last-child)::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: #c9a9cc;
+  position: absolute;
+  top: 0;
+  right: -12px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .item_box nav ul li:not(:last-child)::after {
+    right: -6px;
+  }
+}
+header.hall_header .item_box nav ul li:not(:last-child) {
+  margin-right: 24px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .item_box nav ul li:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+header.hall_header .item_box nav ul li a {
+  color: #c9a9cc;
+  height: 86px;
+  position: relative;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .item_box nav ul li a {
+    font-size: 14px;
+  }
+}
+header.hall_header .item_box nav ul li a:hover::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #c9a9cc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -8px;
+}
+header.hall_header .header_contact {
+  width: 203px;
+  background-color: #ded2a9;
+  border-radius: 4px;
+  text-align: center;
+  padding: 12px 0;
+  color: #fff;
+  transition: all 0.3s, outline 0.1s;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .header_contact {
+    width: 100px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:767px) {
+  header.hall_header .header_contact {
+    display: none;
+  }
+}
+header.hall_header .header_contact:hover {
+  background-color: #fff;
+  outline: 1px solid #ded2a9;
+  color: #ded2a9;
+}
+header.hall_header .plan_list_item {
+  padding: 20px 133px;
+  background-color: #f8f7fc;
+  position: absolute;
+  top: 86px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s, visibility 0.8s;
+}
+header.hall_header .plan_list_item.active {
+  opacity: 1;
+  visibility: visible;
+}
+header.hall_header .plan_list_item.hover_now {
+  opacity: 0.3;
+}
+header.hall_header .plan_list_item ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+header.hall_header .plan_list_item ul li {
+  width: 356px;
+  height: 128px;
+}
+header.hall_header .plan_list_item ul li a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header.hall_header .plan_list_item ul li a:hover .plan_bg {
+  transform: scale(1.2);
+}
+header.hall_header .plan_list_item ul li a .plan_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transition: transform 0.7s;
+}
+header.hall_header .plan_list_item ul li a .plan_bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+header.hall_header .plan_list_item ul li a .plan_text_box {
+  position: absolute;
+  z-index: 3;
+}
+header.hall_header .plan_list_item ul li a .plan_text_box .plan_list_title {
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2.4px;
+  line-height: 1.4583333333;
+  font-size: 24px;
+}
+header.hall_header .plan_list_item ul li a .plan_text_box p {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  font-weight: 100;
+  transform: translateX(5%);
+}
+header.hall_header .plan_list_item ul li .plan_first .plan_bg {
+  background: url(../img/title-pc/syokibo-pc.jpg) no-repeat center center/cover;
+}
+header.hall_header .plan_list_item ul li .plan_second .plan_bg {
+  background: url(../img/title-pc/tyukibo-pc.jpg) no-repeat center center/cover;
+}
+header.hall_header .plan_list_item ul li .plan_third .plan_bg {
+  background: url(../img/title-pc/daikibo-pc.jpg) no-repeat center center/cover;
+}
+
 .hall_main {
   height: 144px;
   background: url(../img/title-pc/hole_second_pc.png) no-repeat center center/cover;
@@ -1395,6 +1611,11 @@ footer .copy p small {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media screen and (max-width:767px) {
+  .hall_main {
+    height: 112px;
+  }
 }
 .hall_main::after {
   content: "";
@@ -1418,6 +1639,16 @@ footer .copy p small {
 .hall_access {
   padding: 0 134px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .hall_access {
+    padding: 0 11px;
+  }
+}
+@media screen and (max-width:767px) {
+  .hall_access {
+    padding: 0 11px;
+  }
+}
 .hall_access h2 {
   margin-bottom: 51px;
 }
@@ -1426,15 +1657,64 @@ footer .copy p small {
   gap: 20px;
   justify-content: center;
   margin-bottom: 96px;
+  height: 393px;
+}
+@media screen and (max-width:767px) {
+  .hall_access .access_item_box ul li {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto 48px;
+    height: auto;
+  }
 }
 .hall_access .access_item_box ul li:nth-of-type(2) {
   flex-direction: row-reverse;
 }
+.hall_access .access_item_box ul li .access_item_sp_title {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2.4px;
+  padding-left: 13px;
+  margin-bottom: 12px;
+  position: relative;
+}
+@media screen and (min-width:1280px) {
+  .hall_access .access_item_box ul li .access_item_sp_title {
+    display: none;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .hall_access .access_item_box ul li .access_item_sp_title {
+    display: none;
+  }
+}
+.hall_access .access_item_box ul li .access_item_sp_title::before {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #e8c3eb;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .hall_access .access_item_box ul li img {
-  width: 535px;
+  width: 50%;
+}
+@media screen and (max-width:767px) {
+  .hall_access .access_item_box ul li img {
+    width: 100%;
+    height: 264px;
+    margin-bottom: 16px;
+  }
 }
 .hall_access .access_item_box ul li .access_item_text {
-  width: 535px;
+  width: 50%;
+}
+@media screen and (max-width:767px) {
+  .hall_access .access_item_box ul li .access_item_text {
+    width: 100%;
+  }
 }
 .hall_access .access_item_box ul li .access_item_text .access_item_title {
   font-size: 24px;
@@ -1444,6 +1724,11 @@ footer .copy p small {
   padding-left: 13px;
   margin-bottom: 12px;
   position: relative;
+}
+@media screen and (max-width:767px) {
+  .hall_access .access_item_box ul li .access_item_text .access_item_title {
+    display: none;
+  }
 }
 .hall_access .access_item_box ul li .access_item_text .access_item_title::before {
   content: "";
@@ -1459,6 +1744,13 @@ footer .copy p small {
   line-height: 1.6;
   margin-bottom: 19px;
 }
+@media screen and (max-width:767px) {
+  .hall_access .access_item_box ul li .access_item_text p {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+  }
+}
 .hall_access .access_item_box ul li .access_item_text iframe {
   display: block;
   width: 100%;
@@ -1469,6 +1761,11 @@ footer .copy p small {
   margin: 0 auto;
   text-align: center;
   outline: 1px solid #c89bd3;
+}
+@media screen and (max-width:767px) {
+  .hall_access .access_area {
+    max-width: 100%;
+  }
 }
 .hall_access .access_area .access_area_title {
   line-height: 45px;
@@ -1486,6 +1783,7 @@ footer .copy p small {
 @media screen and (max-width:767px) {
   .hall_access .access_area .access_area_text {
     padding: 18px 54px;
+    margin: 0 auto 112px;
   }
 }
 .hall_access .access_area .access_area_text dl dt {
@@ -1516,18 +1814,52 @@ footer .copy p small {
   padding: 0 134px 200px;
   position: relative;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .indoor_introduction .hall_list {
+    padding: 0 2% 200px;
+  }
+}
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list {
+    padding: 0 11px 200px;
+    max-width: 100%;
+  }
+}
 .indoor_introduction .hall_list ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
   gap: 24px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .indoor_introduction .hall_list ul {
+    gap: 12px;
+  }
+}
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list ul {
+    display: block;
+  }
+}
 .indoor_introduction .hall_list ul li {
   width: calc((100% - 48px) / 3);
-  height: 486px;
 }
-.indoor_introduction .hall_list ul li:first-child {
-  margin-bottom: 65px;
+.indoor_introduction .hall_list ul li:nth-child(-n+3) {
+  margin-bottom: 64px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .indoor_introduction .hall_list ul li {
+    width: calc((100% - 24px) / 2);
+  }
+  .indoor_introduction .hall_list ul li:not(:last-of-type) {
+    margin-bottom: 54px;
+  }
+}
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list ul li {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 .indoor_introduction .hall_list ul li h3 {
   font-size: 20px;
@@ -1537,6 +1869,12 @@ footer .copy p small {
   padding-left: 13px;
   margin-bottom: 12px;
   position: relative;
+}
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list ul li h3 {
+    margin-bottom: 17px;
+    margin-top: 58px;
+  }
 }
 .indoor_introduction .hall_list ul li h3::before {
   content: "";
@@ -1554,9 +1892,21 @@ footer .copy p small {
      object-fit: cover;
   margin-bottom: 18px;
 }
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list ul li img {
+    margin-bottom: 16px;
+  }
+}
 .indoor_introduction .hall_list ul li p {
   letter-spacing: 1.6px;
   line-height: 1.8;
+}
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list ul li p {
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 1.6;
+  }
 }
 .indoor_introduction .hall_list ul li .text {
   margin-top: 17px;
@@ -1564,16 +1914,37 @@ footer .copy p small {
   letter-spacing: 1.2px;
   line-height: 1.2;
 }
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list ul li .text {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+}
 .indoor_introduction .hall_list .caution {
   font-size: 14px;
   letter-spacing: 1.4px;
   position: absolute;
   bottom: 133px;
   right: 133px;
+  text-align: right;
+  width: 100%;
+}
+@media screen and (max-width:767px) {
+  .indoor_introduction .hall_list .caution {
+    max-width: 353px;
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    right: 2.93%;
+  }
 }
 
 .hall_plan {
   padding: 0 133px 136px 133px;
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .hall_plan {
+    padding: 0 11px 136px;
+  }
 }
 @media screen and (max-width:767px) {
   .hall_plan {
@@ -1615,12 +1986,14 @@ footer .copy p small {
   }
 }
 .hall_plan .plan_list ul li a {
-  display: block;
   width: 100%;
   height: 100%;
   position: relative;
   color: #fff;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .hall_plan .plan_list ul li a:hover .plan_bg {
   transform: scale(1.2);
@@ -1646,14 +2019,7 @@ footer .copy p small {
 }
 .hall_plan .plan_list ul li a .plan_text_box {
   position: absolute;
-  top: 33px;
-  left: 30%;
   z-index: 3;
-}
-@media screen and (min-width:768px) and (max-width:1279px) {
-  .hall_plan .plan_list ul li a .plan_text_box {
-    left: 37px;
-  }
 }
 .hall_plan .plan_list ul li a .plan_text_box h3 {
   font-size: 24px;
