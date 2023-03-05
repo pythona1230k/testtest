@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&display=swap");
 
-// font-family: 'Noto Sans JP', sans-serif;
-// font-family: 'Shippori Mincho', serif;
-
 $font_color: #707070;
 $nav_color: #c9a9cc;
 $tell_color: #cf94d6;
@@ -236,6 +233,9 @@ header {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s, visibility 0.8s;
+    @include mq(tab) {
+      top: 79px;
+    }
 
     &.active {
       opacity: 1;
@@ -1631,6 +1631,9 @@ header.hall_header {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.8s, visibility 0.8s;
+    @include mq(tab) {
+      top: 79px;
+    }
 
     &.active {
       opacity: 1;
@@ -2131,5 +2134,38 @@ header.hall_header {
         }
       }
     }
+  }
+}
+
+////////////////////////////////////////////////
+/// small_plan.html
+////////////////////////////////////////////////
+.small_plan_main {
+  height: 144px;
+  background: url(../img/syokibopuran/kaede.jpg) no-repeat center center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @include mq(sp) {
+    height: 112px;
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  h2 {
+    color: $white_color;
+    font-size: 32px;
+    letter-spacing: 3.2px;
+    font-family: $font_sub;
+    z-index: 2;
   }
 }

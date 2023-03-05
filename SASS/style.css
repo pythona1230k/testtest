@@ -219,6 +219,11 @@ header .plan_list_item {
   visibility: hidden;
   transition: opacity 0.8s, visibility 0.8s;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .plan_list_item {
+    top: 79px;
+  }
+}
 header .plan_list_item.active {
   opacity: 1;
   visibility: visible;
@@ -1529,6 +1534,11 @@ header.hall_header .plan_list_item {
   visibility: hidden;
   transition: opacity 0.8s, visibility 0.8s;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .plan_list_item {
+    top: 79px;
+  }
+}
 header.hall_header .plan_list_item.active {
   opacity: 1;
   visibility: visible;
@@ -2042,4 +2052,36 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
 }
 .hall_plan .plan_list ul li .plan_third .plan_bg {
   background: url(../img/title-pc/daikibo-pc.jpg) no-repeat center center/cover;
+}
+
+.small_plan_main {
+  height: 144px;
+  background: url(../img/syokibopuran/kaede.jpg) no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width:767px) {
+  .small_plan_main {
+    height: 112px;
+  }
+}
+.small_plan_main::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.small_plan_main h2 {
+  color: #fff;
+  font-size: 32px;
+  letter-spacing: 3.2px;
+  font-family: "Shippori Mincho", serif;
+  z-index: 2;
 }/*# sourceMappingURL=style.css.map */
