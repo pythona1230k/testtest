@@ -86,6 +86,15 @@ img {
   transform: translateX(-50%);
 }
 
+.pc_hidden {
+  display: none;
+}
+@media screen and (max-width:767px) {
+  .pc_hidden {
+    display: block;
+  }
+}
+
 header {
   height: 86px;
   padding: 19px 58px;
@@ -276,7 +285,7 @@ header .plan_list_item ul li a .plan_text_box {
   position: absolute;
   z-index: 3;
 }
-header .plan_list_item ul li a .plan_text_box .plan_list_title {
+header .plan_list_item ul li a .plan_text_box ._title {
   font-family: "Shippori Mincho", serif;
   letter-spacing: 2.4px;
   line-height: 1.4583333333;
@@ -404,13 +413,13 @@ header .plan_list_item ul li .plan_third .plan_bg {
 #nav_area .sp_nav nav ul li a:hover {
   opacity: 0.85;
 }
-#nav_area .sp_nav nav ul li a#plan_list_target {
+#nav_area .sp_nav nav ul li a#_target {
   position: relative;
 }
-#nav_area .sp_nav nav ul li a#plan_list_target.open::after {
+#nav_area .sp_nav nav ul li a#_target.open::after {
   transform: rotate(0deg);
 }
-#nav_area .sp_nav nav ul li a#plan_list_target::after {
+#nav_area .sp_nav nav ul li a#_target::after {
   content: "";
   display: inline-block;
   background-image: url(../img/arrow_icon.png);
@@ -424,14 +433,14 @@ header .plan_list_item ul li .plan_third .plan_bg {
   right: -20px;
   transition: transform 1s;
 }
-#nav_area .sp_nav nav ul #plan_list_drop {
+#nav_area .sp_nav nav ul #_drop {
   padding-left: 24px;
   height: 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.9s;
 }
-#nav_area .sp_nav nav ul #plan_list_drop.active {
+#nav_area .sp_nav nav ul #_drop.active {
   height: 200px;
   opacity: 1;
   visibility: visible;
@@ -1591,7 +1600,7 @@ header.hall_header .plan_list_item ul li a .plan_text_box {
   position: absolute;
   z-index: 3;
 }
-header.hall_header .plan_list_item ul li a .plan_text_box .plan_list_title {
+header.hall_header .plan_list_item ul li a .plan_text_box ._title {
   font-family: "Shippori Mincho", serif;
   letter-spacing: 2.4px;
   line-height: 1.4583333333;
@@ -1638,7 +1647,7 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
   left: 0;
   right: 0;
 }
-.hall_main h2 {
+.hall_main h1 {
   color: #fff;
   font-size: 32px;
   letter-spacing: 3.2px;
@@ -2078,10 +2087,399 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
   left: 0;
   right: 0;
 }
-.small_plan_main h2 {
+.small_plan_main h1 {
   color: #fff;
   font-size: 32px;
   letter-spacing: 3.2px;
   font-family: "Shippori Mincho", serif;
   z-index: 2;
+}
+
+.small_plan_list {
+  padding: 54px 133px 136px;
+}
+@media screen and (max-width:767px) {
+  .small_plan_list {
+    padding: 28px 0px 136px;
+    width: 100%;
+  }
+}
+.small_plan_list ul {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width:767px) {
+  .small_plan_list ul {
+    display: block;
+  }
+}
+.small_plan_list ul .plan_li {
+  width: 350px;
+}
+@media screen and (max-width:767px) {
+  .small_plan_list ul .plan_li {
+    width: 100%;
+    padding: 0 11px;
+    margin: 0 auto;
+  }
+}
+.small_plan_list ul .plan_li:not(:last-child) {
+  margin-right: 23px;
+}
+@media screen and (max-width:767px) {
+  .small_plan_list ul .plan_li:not(:last-child) {
+    margin: 0 auto;
+  }
+}
+.small_plan_list ul .plan_li .title {
+  font-family: "Shippori Mincho", serif;
+  margin-bottom: 25px;
+  text-align: center;
+}
+.small_plan_list ul .plan_li .title h2 {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  line-height: 1.2083333333;
+}
+.small_plan_list ul .plan_li .title p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1.45;
+  padding-bottom: 9px;
+  position: relative;
+}
+.small_plan_list ul .plan_li .title p::after {
+  content: "";
+  width: 75px;
+  height: 2px;
+  background-color: #f2d7f5;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.small_plan_list ul .plan_li .img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.small_plan_list ul .plan_li .text {
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  text-align: right;
+  margin-bottom: 28px;
+}
+@media screen and (max-width:767px) {
+  .small_plan_list ul .plan_li .plan_service_list {
+    max-width: 353px;
+    margin: 0 auto;
+  }
+}
+.small_plan_list ul .plan_li .plan_service_list h3 {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-family: "Shippori Mincho", serif;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_imgs {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_imgs .plan_service_list_imgs_item:not(:last-child) {
+  margin-right: 9.5px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_imgs .plan_service_list_imgs_item img {
+  width: 100%;
+  margin-bottom: 6px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_imgs .plan_service_list_imgs_item p {
+  text-align: center;
+  letter-spacing: 2.4px;
+  font-weight: 200;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box {
+  max-width: 353px;
+  margin: 0 auto 107px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3.5px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol li {
+  padding: 12px 4px;
+  text-align: center;
+  outline: 1px solid #707070;
+  width: 85px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width:767px) {
+  .small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol li {
+    margin-bottom: 17.5px;
+  }
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol li img {
+  width: 100%;
+  height: 59px;
+  margin-bottom: 6px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol li p {
+  font-size: 14px;
+  letter-spacing: 0.21px;
+  line-height: 1.2307692308;
+  height: 35px;
+  display: grid;
+  align-items: center;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol li p span {
+  display: block;
+  color: #c57ac5;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol .close {
+  position: relative;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol .close::before {
+  content: "";
+  width: 149px;
+  height: 1px;
+  transform: rotate(-55.5deg);
+  background-color: rgba(112, 112, 112, 0.3);
+  transform-origin: 100% 0%;
+  position: absolute;
+  top: 0;
+  left: -65px;
+}
+.small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol .close::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.not_service_plan {
+  background-color: #f8f7fc;
+  padding: 54px 333px 136px;
+}
+@media screen and (max-width:767px) {
+  .not_service_plan {
+    padding: 26px 0 72px;
+    width: 100%;
+  }
+}
+.not_service_plan .title {
+  font-family: "Shippori Mincho", serif;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.not_service_plan .title h2 {
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  line-height: 1.2083333333;
+  font-weight: 700;
+}
+.not_service_plan .title p {
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1.45;
+}
+.not_service_plan .not_service_plan_box {
+  display: flex;
+  justify-content: space-between;
+  max-width: 699px;
+  margin: 0 auto;
+}
+@media screen and (max-width:767px) {
+  .not_service_plan .not_service_plan_box {
+    max-width: 353px;
+  }
+}
+.not_service_plan .not_service_plan_box .pc {
+  margin-bottom: 18px;
+}
+@media screen and (max-width:767px) {
+  .not_service_plan .not_service_plan_box .pc {
+    display: none;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .not_service_plan .not_service_plan_box .pc {
+    display: none;
+  }
+}
+.not_service_plan .not_service_plan_box .pc li {
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+.not_service_plan .not_service_plan_box .sp {
+  margin-bottom: 18px;
+}
+@media screen and (min-width:1280px) {
+  .not_service_plan .not_service_plan_box .sp {
+    display: none;
+  }
+}
+.not_service_plan .not_service_plan_box .sp li {
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+.not_service_plan .caution_text {
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+  line-height: 1.6;
+  max-width: 699px;
+  margin: 0 auto 54px;
+}
+@media screen and (max-width:767px) {
+  .not_service_plan .caution_text {
+    max-width: 353px;
+    -moz-text-align-last: left;
+         text-align-last: left;
+    font-size: 12px;
+  }
+}
+.not_service_plan .plan_gift_box {
+  max-width: 699px;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (max-width:767px) {
+  .not_service_plan .plan_gift_box {
+    max-width: 353px;
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+}
+.not_service_plan .plan_gift_box p {
+  margin-bottom: 24px;
+  letter-spacing: 1.6px;
+  line-height: 1.6;
+}
+.not_service_plan .plan_gift_box .main_link_item {
+  background: url(../img/okurimono.jpg) no-repeat center center/cover;
+  margin-right: 16px;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1607843137);
+}
+.not_service_plan .plan_gift_box .main_link_item a {
+  display: block;
+  width: 100%;
+  height: 128px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  transition: opacity 0.3s;
+}
+.not_service_plan .plan_gift_box .main_link_item a:hover {
+  opacity: 0.75;
+}
+.not_service_plan .plan_gift_box .main_link_item a h3 {
+  color: #c9a9cc;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 4px;
+  line-height: 1.4583333333;
+  letter-spacing: 2.4px;
+}
+.not_service_plan .plan_gift_box .main_link_item a p {
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  letter-spacing: 1.4px;
+  color: #707070;
+}
+
+.hall_plan h2 {
+  font-weight: 700;
+  text-align: center;
+  font-family: "Shippori Mincho", serif;
+  font-size: 24px;
+  letter-spacing: 2.4px;
+  line-height: 1.2083333333;
+  padding: 54px 0 36px;
+}
+.hall_plan .plan_list {
+  padding-bottom: 40px;
+}
+.hall_plan .plan_list ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+@media screen and (max-width:767px) {
+  .hall_plan .plan_list ul {
+    display: block;
+    width: 100%;
+  }
+}
+.hall_plan .plan_list ul li {
+  width: 535px;
+  height: 128px;
+}
+@media screen and (max-width:767px) {
+  .hall_plan .plan_list ul li {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+.hall_plan .plan_list ul li a {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hall_plan .plan_list ul li a:hover .plan_bg {
+  transform: scale(1.2);
+}
+.hall_plan .plan_list ul li a .plan_bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  transition: transform 0.7s;
+}
+.hall_plan .plan_list ul li a .plan_bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.hall_plan .plan_list ul li a .plan_text_box {
+  position: absolute;
+  z-index: 3;
+}
+.hall_plan .plan_list ul li a .plan_text_box h3 {
+  font-size: 24px;
+  font-family: "Shippori Mincho", serif;
+  letter-spacing: 2.4px;
+  line-height: 1.4583333333;
+}
+.hall_plan .plan_list ul li a .plan_text_box p {
+  font-size: 16px;
+  letter-spacing: 1.6px;
+  line-height: 1.5;
+  font-weight: 100;
+  transform: translateX(5%);
+}
+.hall_plan .plan_list ul li .plan_second .plan_bg {
+  background: url(../img/tyukibopuran.jpg) no-repeat center center/cover;
+}
+.hall_plan .plan_list ul li .plan_third .plan_bg {
+  background: url(../img/title-pc/daikibo-pc.jpg) no-repeat center center/cover;
 }/*# sourceMappingURL=style.css.map */
