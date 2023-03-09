@@ -6,11 +6,7 @@ planList.addEventListener('mouseover', function () {
   planListItem.classList.add('active')
 })
 planList.addEventListener('mouseout', function () {
-  setTimeout(function () {
-    if (!planListItem.classList.contains('active')) {
-      planListItem.classList.remove('active');
-    }
-  }, 2000);
+  planListItem.classList.remove('active');
 })
 
 planList
@@ -54,7 +50,7 @@ const planListDrop = document.querySelector('#plan_list_drop');
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   // スマートフォンやタブレットの場合の処理
-  planListTarget.addEventListener('click', function(){
+  planListTarget.addEventListener('click', function () {
     this.classList.toggle('open')
     planListDrop.classList.toggle('active')
   })
@@ -80,18 +76,6 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     planListTarget.classList.remove('open');
   })
 }
-
-// planListTarget.addEventListener('click', function () {
-//   planListDrop.classList.add('active')
-//   this.classList.add('open')
-
-//   this.addEventListener('mouseout', function () {
-//     planListTarget.classList.remove('open')
-//     planListDrop.classList.remove('active')
-//   })
-// })
-
-
 
 
 //top scroll
