@@ -299,12 +299,23 @@ header .plan_list_item ul li a .plan_text_box .plan_list_title {
   line-height: 1.4583333333;
   font-size: 24px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .plan_list_item ul li a .plan_text_box .plan_list_title {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
 header .plan_list_item ul li a .plan_text_box p {
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
   font-weight: 100;
   transform: translateX(5%);
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header .plan_list_item ul li a .plan_text_box p {
+    font-size: 14px;
+  }
 }
 header .plan_list_item ul li .plan_first .plan_bg {
   background: url(../img/title-pc/syokibo-pc.jpg) no-repeat center center/cover;

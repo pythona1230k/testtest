@@ -314,6 +314,10 @@ header {
               letter-spacing: 2.4px;
               line-height: calc(35 / 24);
               font-size: 24px;
+              @include mq(tab) {
+                font-size: 18px;
+                padding-left: 10px;
+              }
             }
             p {
               font-size: 16px;
@@ -321,6 +325,9 @@ header {
               line-height: calc(24 / 16);
               font-weight: 100;
               transform: translateX(5%);
+              @include mq(tab) {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -2374,9 +2381,6 @@ header.hall_header {
           max-width: 353px;
           margin: 0 auto 136px;
           ol {
-            // display: grid;
-            // grid-template-columns: repeat(4, 1fr);
-            // grid-gap: 3.5px;
             display: flex;
             flex-wrap: wrap;
             gap: 3px;
