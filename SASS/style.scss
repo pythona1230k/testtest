@@ -11,6 +11,7 @@ $font_sub: "Shippori Mincho", serif;
 
 //media
 $breakpoints: (
+  "mini": "screen and (max-width:370px)",
   "sp": "screen and (max-width:767px)",
   "tab": "screen and (min-width:768px) and (max-width:1279px)",
   "pc": "screen and (min-width:1280px)",
@@ -129,7 +130,7 @@ header {
   padding: 19px 58px;
   position: relative;
   @include mq(tab) {
-    padding: 19px 5%;
+    padding: 19px 11px;
     height: 79px;
   }
 
@@ -223,7 +224,8 @@ header {
     transition: all 0.3s, outline 0.1s;
     @include mq(tab) {
       width: 100px;
-      font-size: 12px;
+      padding: 12px 3px;
+      font-size: 11px;
     }
     @include mq(sp) {
       display: none;
@@ -1525,7 +1527,7 @@ header.hall_header {
   padding: 19px 58px;
   position: relative;
   @include mq(tab) {
-    padding: 19px 5%;
+    padding: 19px 11px;
     height: 79px;
   }
 
@@ -1621,7 +1623,8 @@ header.hall_header {
     transition: all 0.3s, outline 0.1s;
     @include mq(tab) {
       width: 100px;
-      font-size: 12px;
+      padding: 12px 3px;
+      font-size: 11px;
     }
     @include mq(sp) {
       display: none;
@@ -1710,6 +1713,10 @@ header.hall_header {
               letter-spacing: 2.4px;
               line-height: calc(35 / 24);
               font-size: 24px;
+              @include mq(tab) {
+                font-size: 18px;
+                padding-left: 10px;
+              }
             }
             p {
               font-size: 16px;
@@ -1717,6 +1724,9 @@ header.hall_header {
               line-height: calc(24 / 16);
               font-weight: 100;
               transform: translateX(5%);
+              @include mq(tab) {
+                font-size: 14px;
+              }
             }
           }
         }
@@ -2001,6 +2011,7 @@ header.hall_header {
         p {
           letter-spacing: 1.6px;
           line-height: calc(28.8 / 16);
+          text-align: justify;
           @include mq(sp) {
             font-size: 14px;
             letter-spacing: 1.4px;
@@ -2363,9 +2374,15 @@ header.hall_header {
           max-width: 353px;
           margin: 0 auto 136px;
           ol {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            grid-gap: 3.5px;
+            // display: grid;
+            // grid-template-columns: repeat(4, 1fr);
+            // grid-gap: 3.5px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+            @include mq(mini) {
+              justify-content: center;
+            }
             li {
               padding: 12px 4px;
               text-align: center;
@@ -2683,10 +2700,16 @@ header.hall_header {
   @include mq(sp) {
     padding: 28px 13px 111px;
   }
+  @include mq(tab) {
+    padding: 28px 13px 111px;
+  }
   .text_box {
     text-align: center;
     margin-bottom: 36px;
     @include mq(sp) {
+      text-align-last: left;
+    }
+    @include mq(tab) {
       text-align-last: left;
     }
     h2 {
@@ -2723,9 +2746,15 @@ header.hall_header {
       @include mq(sp) {
         display: block;
       }
+      @include mq(tab) {
+        display: block;
+      }
       li {
         position: relative;
         @include mq(sp) {
+          margin-bottom: 59px;
+        }
+        @include mq(tab) {
           margin-bottom: 59px;
         }
         h3 {
@@ -2747,9 +2776,25 @@ header.hall_header {
           font-size: 14px;
           letter-spacing: 1.4px;
           line-height: calc(22.4 / 14);
+          transition: color 0.3s;
+          &:hover {
+            color: #cf94d6;
+          }
         }
         .select {
           @include mq(sp) {
+            &::after {
+              content: "";
+              width: 100%;
+              height: 1.5px;
+              background-color: $banner_color;
+              opacity: 0.2;
+              position: absolute;
+              bottom: -30px;
+              left: 0;
+            }
+          }
+          @include mq(tab) {
             &::after {
               content: "";
               width: 100%;
@@ -2784,9 +2829,19 @@ header.hall_header {
         @include mq(sp) {
           flex-wrap: wrap;
         }
+        @include mq(tab) {
+          flex-wrap: wrap;
+        }
         li {
           width: 260px;
           @include mq(sp) {
+            width: calc(100% / 2);
+            padding: 0 3px;
+            &:first-child {
+              margin-bottom: 41px;
+            }
+          }
+          @include mq(tab) {
             width: calc(100% / 2);
             padding: 0 3px;
             &:first-child {
@@ -2828,9 +2883,19 @@ header.hall_header {
         @include mq(sp) {
           flex-wrap: wrap;
         }
+        @include mq(tab) {
+          flex-wrap: wrap;
+        }
         li {
           width: 260px;
           @include mq(sp) {
+            width: calc(100% / 2);
+            padding: 0 3px;
+            &:first-child {
+              margin-bottom: 41px;
+            }
+          }
+          @include mq(tab) {
             width: calc(100% / 2);
             padding: 0 3px;
             &:first-child {
@@ -2868,6 +2933,11 @@ header.hall_header {
         right: 0;
         bottom: -30px;
         @include mq(sp) {
+          left: 50%;
+          bottom: -40px;
+          transform: translateX(-50%);
+        }
+        @include mq(tab) {
           left: 50%;
           bottom: -40px;
           transform: translateX(-50%);

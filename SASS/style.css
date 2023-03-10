@@ -109,7 +109,7 @@ header {
 }
 @media screen and (min-width:768px) and (max-width:1279px) {
   header {
-    padding: 19px 5%;
+    padding: 19px 11px;
     height: 79px;
   }
 }
@@ -210,7 +210,8 @@ header .header_contact {
 @media screen and (min-width:768px) and (max-width:1279px) {
   header .header_contact {
     width: 100px;
-    font-size: 12px;
+    padding: 12px 3px;
+    font-size: 11px;
   }
 }
 @media screen and (max-width:767px) {
@@ -1425,7 +1426,7 @@ header.hall_header {
 }
 @media screen and (min-width:768px) and (max-width:1279px) {
   header.hall_header {
-    padding: 19px 5%;
+    padding: 19px 11px;
     height: 79px;
   }
 }
@@ -1530,7 +1531,8 @@ header.hall_header .header_contact {
 @media screen and (min-width:768px) and (max-width:1279px) {
   header.hall_header .header_contact {
     width: 100px;
-    font-size: 12px;
+    padding: 12px 3px;
+    font-size: 11px;
   }
 }
 @media screen and (max-width:767px) {
@@ -1618,12 +1620,23 @@ header.hall_header .plan_list_item ul li a .plan_text_box .plan_list_title {
   line-height: 1.4583333333;
   font-size: 24px;
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .plan_list_item ul li a .plan_text_box .plan_list_title {
+    font-size: 18px;
+    padding-left: 10px;
+  }
+}
 header.hall_header .plan_list_item ul li a .plan_text_box p {
   font-size: 16px;
   letter-spacing: 1.6px;
   line-height: 1.5;
   font-weight: 100;
   transform: translateX(5%);
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
+  header.hall_header .plan_list_item ul li a .plan_text_box p {
+    font-size: 14px;
+  }
 }
 header.hall_header .plan_list_item ul li .plan_first .plan_bg {
   background: url(../img/title-pc/syokibo-pc.jpg) no-repeat center center/cover;
@@ -1931,6 +1944,7 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
 .indoor_introduction .hall_list ul li p {
   letter-spacing: 1.6px;
   line-height: 1.8;
+  text-align: justify;
 }
 @media screen and (max-width:767px) {
   .indoor_introduction .hall_list ul li p {
@@ -2304,9 +2318,14 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
   margin: 0 auto 136px;
 }
 .small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 3.5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+@media screen and (max-width:370px) {
+  .small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol {
+    justify-content: center;
+  }
 }
 .small_plan_list ul .plan_li .plan_service_list .plan_service_list_box ol li {
   padding: 12px 4px;
@@ -2623,11 +2642,22 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
     padding: 28px 13px 111px;
   }
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .gift_contact {
+    padding: 28px 13px 111px;
+  }
+}
 .gift_contact .text_box {
   text-align: center;
   margin-bottom: 36px;
 }
 @media screen and (max-width:767px) {
+  .gift_contact .text_box {
+    -moz-text-align-last: left;
+         text-align-last: left;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .gift_contact .text_box {
     -moz-text-align-last: left;
          text-align-last: left;
@@ -2667,10 +2697,20 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
     display: block;
   }
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .gift_contact .contact_list ul {
+    display: block;
+  }
+}
 .gift_contact .contact_list ul li {
   position: relative;
 }
 @media screen and (max-width:767px) {
+  .gift_contact .contact_list ul li {
+    margin-bottom: 59px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .gift_contact .contact_list ul li {
     margin-bottom: 59px;
   }
@@ -2694,8 +2734,24 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
   font-size: 14px;
   letter-spacing: 1.4px;
   line-height: 1.6;
+  transition: color 0.3s;
+}
+.gift_contact .contact_list ul li a:hover {
+  color: #cf94d6;
 }
 @media screen and (max-width:767px) {
+  .gift_contact .contact_list ul li .select::after {
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background-color: #707070;
+    opacity: 0.2;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .gift_contact .contact_list ul li .select::after {
     content: "";
     width: 100%;
@@ -2730,10 +2786,24 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .gift_contact .gift_list .first ul {
+    flex-wrap: wrap;
+  }
+}
 .gift_contact .gift_list .first ul li {
   width: 260px;
 }
 @media screen and (max-width:767px) {
+  .gift_contact .gift_list .first ul li {
+    width: 50%;
+    padding: 0 3px;
+  }
+  .gift_contact .gift_list .first ul li:first-child {
+    margin-bottom: 41px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .gift_contact .gift_list .first ul li {
     width: 50%;
     padding: 0 3px;
@@ -2777,10 +2847,24 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width:768px) and (max-width:1279px) {
+  .gift_contact .gift_list .second ul {
+    flex-wrap: wrap;
+  }
+}
 .gift_contact .gift_list .second ul li {
   width: 260px;
 }
 @media screen and (max-width:767px) {
+  .gift_contact .gift_list .second ul li {
+    width: 50%;
+    padding: 0 3px;
+  }
+  .gift_contact .gift_list .second ul li:first-child {
+    margin-bottom: 41px;
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .gift_contact .gift_list .second ul li {
     width: 50%;
     padding: 0 3px;
@@ -2815,6 +2899,13 @@ header.hall_header .plan_list_item ul li .plan_third .plan_bg {
   bottom: -30px;
 }
 @media screen and (max-width:767px) {
+  .gift_contact .gift_list .second .gift_caution_text {
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width:768px) and (max-width:1279px) {
   .gift_contact .gift_list .second .gift_caution_text {
     left: 50%;
     bottom: -40px;
