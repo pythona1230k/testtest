@@ -96,3 +96,19 @@ top_scroll.addEventListener("click", scroll_top);
 function scroll_top() {
   window.scroll({ top: 0, behavior: "smooth" });
 }
+
+
+//ball_link 表示切り替え
+var timer;
+
+const ballLink = document.getElementById("ball_link");
+
+window.addEventListener("scroll", function () {
+  ballLink.classList.add('active')
+
+  clearTimeout(timer);
+
+  timer = setTimeout(function () {
+    ballLink.classList.remove('active')
+  }, 2000);
+});

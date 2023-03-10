@@ -1471,6 +1471,13 @@ footer {
 
 // ball_link
 .ball_link {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .7s, visibility .7s;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
   @include mq(pc) {
     display: none;
   }
