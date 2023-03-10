@@ -1375,8 +1375,8 @@ footer .copy p small {
 }
 
 .ball_link {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: opacity 0.7s, visibility 0.7s;
   position: fixed;
   bottom: 20px;
@@ -1384,8 +1384,8 @@ footer .copy p small {
   transform: translate(-50%);
 }
 .ball_link.active {
-  opacity: 1;
-  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
 }
 @media screen and (min-width:1280px) {
   .ball_link {
