@@ -101,7 +101,7 @@ function scroll_top() {
 //ball_link 表示切り替え
 var timer;
 
-const ballLink = document.getElementById("ball_link");
+const ballLink = document.querySelector(".ball_link");
 
 window.addEventListener("scroll", function () {
   ballLink.classList.add('active')
@@ -110,5 +110,5 @@ window.addEventListener("scroll", function () {
 
   timer = setTimeout(function () {
     ballLink.classList.remove('active')
-  }, 2000);
+  }, 1000);
 });

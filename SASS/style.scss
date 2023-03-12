@@ -1473,7 +1473,7 @@ footer {
 .ball_link {
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 1s, visibility 1s;
   &.active {
     opacity: 0;
     visibility: hidden;
@@ -1505,6 +1505,7 @@ footer {
         border-radius: 50%;
         padding: 20px 0;
         border: 3px solid #9e95c7;
+        color: #9e95c7;
 
         &:hover {
           opacity: 0.85;
